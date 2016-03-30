@@ -1,31 +1,26 @@
 package main.java;
 
-
 public abstract class Productos {
-	 public int valorFijoNegocio;
 	
+	protected float valorFijoNegocio;
 	
-	 abstract int getPrecioBase();
-	 abstract boolean esImportada();
+	abstract int getPrecioBase();
+	abstract boolean esImportada();
 	
+	private float impuestoImportacion(){
+		int base = this.getPrecioBase();
+		float impuesto = base * 30/100;
+		return base + impuesto;
+	}
 	
-	public int precioFinal(){
+	public float precioFinal(){
+		float precioFin;
 		if (this.esImportada()){
-			int precioFinal = (this.getValorFijoNegocio() + this.getPrecioBase()) * 30/100;
-			return precioFinal;
-		} else{
-			int precioFinal = (this.getValorFijoNegocio() + this.getPrecioBase());
-			return precioFinal;
+			precioFin = (float) this.valorFijoNegocio + this.impuestoImportacion(); 
+		} else {
+			precioFin = (float) this.valorFijoNegocio + this.getPrecioBase();
 		}
+		return precioFin;
 	}
-	
-	public int getValorFijoNegocio() {
-		return valorFijoNegocio;
-	}
-	
-	public void setValorFijoNegocio(int valorFijoNegocio) {
-		this.valorFijoNegocio = valorFijoNegocio;
-	}
-
 	
 }

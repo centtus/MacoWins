@@ -17,10 +17,5 @@ public class Saco extends Productos {
 		return this.importada;
 	}
 
-	public int precioFinal(){
-		
-			int precioFinal = this.getValorFijoNegocio() + this.precioBase;
-			return precioFinal;
-		}
 	
 }
