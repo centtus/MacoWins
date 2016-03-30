@@ -11,12 +11,13 @@ public class VentaTest {
 
 	@Test
 	public void test() {
+//		Ganancias ganancia = new Ganancias();
 		Productos camisa = new Camisa(true);
 		Venta venta = new Venta(camisa,5);
 		Camisa camisa2 = (Camisa) venta.getProducto();
-		System.out.println(camisa2.precioFinal());
+		System.out.println("precio final camisa:" +camisa2.precioFinal());
 		
-		System.out.println(venta.gananciaDelDia());
+		
 		
 	}
 
