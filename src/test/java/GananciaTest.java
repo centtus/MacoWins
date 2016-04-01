@@ -1,12 +1,22 @@
 package test.java;
 import java.util.*;
+
 import org.junit.Test;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import junit.framework.*;
+import main.java.Camisa;
+import main.java.Pantalon;
+import main.java.Productos;
+import main.java.Saco;
 
 import main.java.Camisa;
 import main.java.Productos;
 import main.java.Venta;
 import main.java.Ganancias;
 import main.java.Pantalon;
+
 
 public class GananciaTest {
 
@@ -26,13 +36,11 @@ public class GananciaTest {
 
 		
 		
-		
-		
 		ventas.add(venta1);
 		ventas.add(venta2);
 		
 		Ganancias ganancia = new Ganancias(ventas, new Date());
-		System.out.println("ganancia del dia:" + ganancia.valorTotal());
+		Assert.assertEquals(ganancia.valorTotal(),650);
 		
 
 	
