@@ -2,8 +2,15 @@ package main.java;
 
 import java.util.Date;
 import java.util.*;
+import java.util.stream.*;
+import java.text.SimpleDateFormat;
+
+
+
+
 
 import main.java.Venta;
+
 
 public class Ganancias {
 	int valor=0;
@@ -16,7 +23,10 @@ public class Ganancias {
 	public Ganancias(List <Venta> listaVentas, Date fechaAnalisis){
 		this.fecha = fechaAnalisis;
 		this.ventas = listaVentas;
-		this.ventas.stream().filter(item -> item.getDate() == fechaAnalisis);
+
+		 SimpleDateFormat fmt = new SimpleDateFormat("yyyyMMdd");
+
+		this.ventas=this.ventas.stream().filter(item -> fmt.format(item.getDate()).equals(fmt.format(fechaAnalisis))).collect(Collectors.toList());
 
 	}
 	
