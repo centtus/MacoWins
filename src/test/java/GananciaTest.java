@@ -32,17 +32,14 @@ public class GananciaTest {
 		Venta venta1 = new Venta(camisa,5);
 		Venta venta2 = new Venta(pantalon,2);
 	
-		Date date = new GregorianCalendar(1999, 8, 8).getTime();System.out.println(date);venta1.setFechaDeVenta(date);
+		Date date = new GregorianCalendar(1999, 8, 8).getTime();venta1.setFechaDeVenta(date);
 
-		
 		
 		ventas.add(venta1);
 		ventas.add(venta2);
 		
 		Ganancias ganancia = new Ganancias(ventas, new Date());
-		Assert.assertEquals(ganancia.valorTotal(),650);
+		Assert.assertEquals(ganancia.valorTotal(),650.0,0);
 		
-
-	
-}
+	}
 }

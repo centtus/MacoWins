@@ -13,7 +13,7 @@ import main.java.Venta;
 
 
 public class Ganancias {
-	int valor=0;
+	float valor=0;
 	Date fecha;
 	List<Venta> ventas = new ArrayList<>();
 	
@@ -30,7 +30,7 @@ public class Ganancias {
 
 	}
 	
-	public int valorTotal(){
+	public float valorTotal(){
 		
 		this.ventas.forEach(item->this.valor+=item.gananciaDeLaVenta());
 		return this.valor;
