@@ -3,7 +3,6 @@ package test.java;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import junit.framework.*;
 import main.java.Camisa;
 import main.java.Pantalon;
 import main.java.Productos;
@@ -22,8 +21,7 @@ public class PrecioTest {
 	  
 	   
 	  
-	   Pantalon  pantalon2 = new Pantalon(false);
-	   
+
 	  }
 	
 	@Test

@@ -3,19 +3,13 @@ import java.util.*;
 
 import org.junit.Test;
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import junit.framework.*;
-import main.java.Camisa;
-import main.java.Pantalon;
-import main.java.Productos;
-import main.java.Saco;
 
 import main.java.Camisa;
+import main.java.Pantalon;
 import main.java.Productos;
 import main.java.Venta;
 import main.java.Ganancias;
-import main.java.Pantalon;
+
 
 
 public class GananciaTest {
