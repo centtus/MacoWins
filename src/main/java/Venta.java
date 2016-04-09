@@ -12,9 +12,8 @@ public class Venta {
 		this.cantidad = cant;
 	}
 	
-	public float gananciaDeLaVenta(){
-		float precioFin = producto.precioFinal() * cantidad;
-	return 	precioFin;
+	public double gananciaDeLaVenta(){
+		return producto.precioFinal() * cantidad;
 	}
 
 	public Date getFechaDeVenta() {

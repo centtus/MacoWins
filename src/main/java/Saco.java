@@ -2,19 +2,13 @@ package main.java;
 
 
 public class Saco extends Productos {
-	int precioBase = 300;
-	Boolean importada;
+//	int 
+
 	
-	public Saco(Boolean imp){ //constructor
-		this.importada = imp;
-	}
-	
-	public int getPrecioBase(){
-		return this.precioBase;
-	}
-	
-	boolean esImportada(){
-		return this.importada;
+	public Saco(Origen origen,int botones, Marca marca){ //constructor
+		this.origen = origen;
+		this.precioBase = 300+10*botones;
+		this.marca = marca;
 	}
 
 	

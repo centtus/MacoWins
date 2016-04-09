@@ -2,18 +2,13 @@ package main.java;
 
 
 public class Camisa extends Productos {
-	int precioBase = 200;
 	Boolean importada;
 	
-	public Camisa(Boolean imp){ //constructor
-		this.importada = imp;
+	public Camisa(Origen origen,Marca marca){
+		this.origen = origen;
+		this.precioBase = 200.0;
+		this.marca = marca;
 	}
 	
-	public int getPrecioBase(){
-		return this.precioBase;
-	}
-	
-	boolean esImportada(){
-		return this.importada;
-	}
+
 }

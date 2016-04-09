@@ -12,25 +12,27 @@ import java.text.SimpleDateFormat;
 import main.java.Venta;
 
 
-public class Ganancias {
+public class Libro {
 	float valor=0;
-	Date fecha;
+	
 	List<Venta> ventas = new ArrayList<>();
 	
 
 	
 
-	public Ganancias(List <Venta> listaVentas, Date fechaAnalisis){
-		this.fecha = fechaAnalisis;
+	public Libro(List <Venta> listaVentas){
+		
 		this.ventas = listaVentas;
 
-		 SimpleDateFormat fmt = new SimpleDateFormat("yyyyMMdd");
-
-		this.ventas=this.ventas.stream().filter(item -> fmt.format(item.getDate()).equals(fmt.format(fechaAnalisis))).collect(Collectors.toList());
 
 	}
 	
-	public float valorTotal(){
+	public float gananciaDelDia(){
+		
+		 SimpleDateFormat fmt = new SimpleDateFormat("yyyyMMdd");
+
+		this.ventas=this.ventas.stream().filter(item -> fmt.format(item.getDate()).equals(fmt.format(new Date()))).collect(Collectors.toList());
+
 		
 		this.ventas.forEach(item->this.valor+=item.gananciaDeLaVenta());
 		return this.valor;
