@@ -11,7 +11,7 @@ public abstract class Productos {
 	protected Origen origen;
 
 	public double precioFinal() {
-		return (this.valorFijoNegocio +this.precioBase) * this.origen.coeficiente();
+		return this.marca.politicaDePrecios((this.valorFijoNegocio +this.precioBase) * this.origen.coeficiente());
 	}
 
 	public double getPrecioBase() {
