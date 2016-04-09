@@ -4,11 +4,11 @@ import main.java.Origen;
 public abstract class Productos {
 
 	protected float valorFijoNegocio;
-	Marca marca;
+	protected Marca marca;
 
-	double precioBase;
+	protected double precioBase;
 
-	Origen origen;
+	protected Origen origen;
 
 	public double precioFinal() {
 		return (this.valorFijoNegocio +this.precioBase) * this.origen.coeficiente();
