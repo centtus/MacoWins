@@ -31,10 +31,12 @@ public class Libro {
 		
 		 SimpleDateFormat fmt = new SimpleDateFormat("yyyyMMdd");
 
-		this.ventas=this.ventas.stream().filter(item -> fmt.format(item.getDate()).equals(fmt.format(new Date()))).collect(Collectors.toList());
-
+		//this.ventas=this.ventas.stream().filter(item -> fmt.format(item.getDate()).equals(fmt.format(new Date()))).collect(Collectors.toList());
 		
-		this.ventas.forEach(item->this.valor+=item.gananciaDeLaVenta());
+		Stream<Venta> ventasDia = this.ventas.stream().filter(item -> fmt.format(item.getDate()).equals(fmt.format(new Date())));
+		
+		//this.ventas.forEach(item->this.valor = (float) (this.valor + item.gananciaDeLaVenta()));
+		ventasDia.forEach(item->this.valor = (float) (this.valor + item.gananciaDeLaVenta()));
 		return this.valor;
 		/* ver como usar map
 		this.ventas.map(new Function<Venta>() {

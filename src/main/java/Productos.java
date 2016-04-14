@@ -3,7 +3,7 @@ import main.java.Origen;
 
 public abstract class Productos {
 
-	protected float valorFijoNegocio;
+	float valorFijoNegocio = (float) 120.0;
 	protected Marca marca;
 
 	protected double precioBase;
@@ -11,12 +11,18 @@ public abstract class Productos {
 	protected Origen origen;
 
 	public double precioFinal() {
-		return this.marca.politicaDePrecios((this.valorFijoNegocio +this.precioBase) * this.origen.coeficiente());
+		return this.marca.politicaDePrecios((this.getValorFijoNegocio() +this.precioBase) * this.origen.coeficiente());
 	}
 
 	public double getPrecioBase() {
 		return this.precioBase;
 	}
+
+	public float getValorFijoNegocio() {
+		return valorFijoNegocio;
+	}
+
+	
 
 
 

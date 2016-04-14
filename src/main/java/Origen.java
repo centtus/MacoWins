@@ -10,7 +10,7 @@ public enum Origen {
 	
 	NACIONAL {
 	    public double coeficiente(){
-	    	return 1.3;    	
+	    	return 1.0;    	
 	    }		
 	};
 	
